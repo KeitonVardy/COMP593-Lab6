@@ -52,9 +52,8 @@ def get_pastebin_strings(poke_info):
     title = poke_info['name'] + "'s Abilities"
 
     body_text = ""
-    for x in poke_info['abilities'][0]['ability']:
-         body_text += '-' + str(x) + '\n'
-         print(x)
+    for x in poke_info['abilities']:
+         print(x['ability']['name'])
     
 
     return (title, body_text)
